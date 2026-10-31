@@ -1,0 +1,38 @@
+# Fartak Beauty Clinic - crawler access policy
+# Main goal: keep the public website discoverable by search and AI crawlers.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: OAI-AdsBot
+Allow: /
+
+# ChatGPT user-initiated browsing is separate from search crawling.
+User-agent: ChatGPT-User
+Allow: /
+
+# Independent AI/search crawlers
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google token used for Gemini-related controls.
+User-agent: Google-Extended
+Allow: /
+
+# Keep normal search engine crawling open.
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Do not grant GPTBot training access merely for AI-search visibility.
+User-agent: GPTBot
+Disallow: /
+
+# All other public crawlers can access the public site.
+User-agent: *
+Allow: /
